@@ -66,6 +66,7 @@ bool keep_playing() {
     std::cout << "Keep playing? [Y]es or [N]o" << std::endl;
     std::cout << ">";
     std::cin >> choice;
+    std::cout << std::endl;
     choice = toupper(choice);
     if (choice == 'Y') {
         return true;
