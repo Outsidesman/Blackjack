@@ -106,11 +106,27 @@ void set_new_hiscore(int hiscore) {
     file.close();
 }
 
+void show_title(int hiscore) {
+    clear_screen();
+    std::cout << "*********************"  << std::endl;
+    std::cout << "*|_ | _  _| . _  _| *" << std::endl;
+    std::cout << "*|_)|(_|(_|<|(_|(_|<*" << std::endl;
+    std::cout << "*          L|       *" << std::endl;
+    std::cout << "*********************" << std::endl << std::endl;
+    std::cout << "The current hiscore is $" << hiscore << std::endl;
+    std::cout << "Can you beat it?" << std::endl;
+    std::cout << "Enter key to continue..." << std::endl;
+    system("read");    
+}
+
+
 int main() {
     const int blindBet = 100;
     int playerCash = 1000;
     int bet = 0;
     int hiscore = get_hiscore();
+
+    show_title(hiscore);
 
     while (1){
         // Instantiate deck and hands
